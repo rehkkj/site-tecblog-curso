@@ -1,122 +1,181 @@
-/* Limpar formatações */
+/* Variáveis para facilitar a manutenção */
+:root {
+    --primary-color: #2ecc71;
+    --secondary-color: #27ae60;
+    --dark-bg: #2c3e50;
+    --light-bg: #f4f7f6;
+    --text-color: #333;
+    --white: #ffffff;
+}
+
 * {
-    margin:0 ;
+    margin: 0;
     padding: 0;
-}
-body{
-    font-size: 1em;
-    font-family: "Quicksand", sans-serif;
-    background-color: #F3F9D2;
+    box-sizing: border-box;
 }
 
-/* LAYOUT */
-
-/* Formatações-Geral */
-a{
-    text-decoration: none;
-    transition: 0.5s;
-}
-#area-cabecalho{
-    background-color: #C0D684;
-    padding: 15px;
-    text-align: center;
-    margin: 15px;
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
-#area-logo{
-    padding: 10px; 
-}
-
-#area-menu{
-    padding: 10px;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-#area-principal{
-    width: 920px;
+.container {
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 15px;
+    padding: 0 20px;
 }
 
-#area-postagens{
-    width: 660px;
-    float: left;
+/* Header e Menu */
+#main-header {
+    background-color: var(--dark-bg);
+    color: var(--white);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.postagem{
-    padding: 20px;
-    margin-bottom: 20px;
-    background: white;
+#logo h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-#area-lateral{
-    width: 240px;
-    float: right;
+.highlight {
+    color: var(--primary-color);
 }
 
-#rodape{
-    background-color: #b8ccae;
-    clear: both;
-    text-align: center;
-    padding: 15px;
+#menu {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-h1{
-    font-family: "Noto Sans", sans-serif;
-    font-size: 2.5em;
-    font-weight: 600;
-}
-
-h2{
-    color: #9CF56E;
-}
-
-.branco{
-    color: #ffffff;
-}
-
-.data-postagem{
-    text-decoration: underline;
-    font-size: 0.8em;
-    font-weight: 500;
-    border-bottom: 1px solid #f4f4f4;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    display: block;
-}
-
-a:link, a:visited {
-    color: #9CF56E;
-}
-a:hover{
-    text-decoration: underline;
-}
-
-.conteudo-lateral{
-    background: white;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.texto-lateral{
-    font-size: 0.8em;
-    padding: 5px;
-}
-
-h3{
-    color: #fff;
-    background-color: #C0D684;
-    padding: 5px;
-}
-
-/* Formatação de menu */
-#area-cabecalho a:link, #area-cabecalho a:visited {
-    color: #fff;
-    padding: 8px 12px;
-}
-#area-cabecalho a:hover{
-    color: #C0D684;
-    background-color: white;
+#menu a {
+    color: var(--white);
     text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+#menu a:hover {
+    color: var(--primary-color);
+}
+
+/* Grid Principal */
+#main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Postagens */
+.postagem {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.postagem h2 {
+    color: var(--dark-bg);
+    margin-bottom: 10px;
+}
+
+.data-postagem {
+    font-size: 0.85rem;
+    color: #888;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.img-wrapper img:hover {
+    transform: scale(1.02);
+}
+
+.btn-leia {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid var(--primary-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.btn-leia:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Sidebar */
+.conteudo-lateral {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.conteudo-lateral h3 {
+    background: var(--dark-bg);
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+}
+
+.lista-lateral {
+    list-style: none;
+}
+
+.categorias-links a {
+    display: block;
+    padding: 8px 0;
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+}
+
+.categorias-links a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+/* Rodapé */
+#rodape {
+    background: var(--dark-bg);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 50px;
+}
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+    #main-content {
+        grid-template-columns: 1fr;
+    }
+    
+    #menu {
+        flex-direction: column;
+        align-items: center;
+    }
 }

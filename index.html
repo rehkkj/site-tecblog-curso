@@ -3,74 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="src/style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
-        </style>    
+    <title>TecBlog - O seu guia de tecnologia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="area-cabecalho">
-        <div id="area-logo">
-            <h1>Tec<span class="branco">Blog</span></h1>
-        </div>
-        <div id="area-menu">
-            <a href="index.html">Home</a>
-            <a href="jogos.html">Jogos</a>
-            <a href="celulares.html">Celulares</a>
-            <a href="informatica.html">Informática</a>
-            <a href="eletronicos.html">Eletrônicos</a>
-        </div>
-    </div>
-    <div id="area-principal">
-        <div id="area-postagens">
-            <!-- Abertura de Postagem -->
-            <div class="postagem">
-                <h2>Titulo da postagem 2</h2>
-                <span class="data-postagem">postado 9 de junho de 2006</span>
-                <img width=620px src=".//images/imagem2.jpg">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aperiam amet, eos delectus magnam quasi voluptates quaerat cupiditate officia possimus similique facere! Soluta dolores nobis magnam cumque doloribus voluptate quam!</p>
-                <a href="">Leia Mais</a>
-            </div>
-            <!--// Fechamento da Postagem -->
 
-            <!-- Abertura de Postagem -->
-            <div class="postagem">
-                <h2>Titulo da postagem 1</h2>
-                <span class="data-postagem">postado 29 de janeiro de 2007</span>
-                <img width=620px src=".//images/imagem1.jpg">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aperiam amet, eos delectus magnam quasi voluptates quaerat cupiditate officia possimus similique facere! Soluta dolores nobis magnam cumque doloribus voluptate quam!</p>
-                <a href="">Leia Mais</a>
+    <header id="main-header">
+        <div class="container">
+            <div id="logo">
+                <h1>Tec<span class="highlight">Blog</span></h1>
             </div>
-            <!--// Fechamento da Postagem -->
+            <nav id="menu">
+                <a href="index.html">Home</a>
+                <a href="jogos.html">Jogos</a>
+                <a href="celulares.html">Celulares</a>
+                <a href="informatica.html">Informática</a>
+                <a href="eletronicos.html">Eletrônicos</a>
+            </nav>
         </div>
-        <div id="area-lateral">
+    </header>
+
+    <main class="container" id="main-content">
+        <section id="area-postagens">
+            <article class="postagem">
+                <h2>O Futuro da Inteligência Artificial em 2026</h2>
+                <span class="data-postagem">Postado em 30 de abril de 2026</span>
+                <div class="img-wrapper">
+                    <img src="./images/imagem1.jpg" alt="IA e Robótica">
+                </div>
+                <p>A integração entre humanos e máquinas atingiu um novo patamar. Descubra como as novas interfaces neurais estão mudando o mercado de trabalho...</p>
+                <a href="" class="btn-leia">Leia Mais</a>
+            </article>
+
+            <article class="postagem">
+                <h2>React vs Next.js: Qual escolher?</h2>
+                <span class="data-postagem">Postado em 25 de abril de 2026</span>
+                <div class="img-wrapper">
+                    <img src="./images/imagem2.jpg" alt="Programação">
+                </div>
+                <p>O ecossistema JavaScript não para de evoluir. Analisamos as métricas de performance das bibliotecas mais famosas do mundo.</p>
+                <a href="" class="btn-leia">Leia Mais</a>
+            </article>
+        </section>
+
+        <aside id="area-lateral">
             <div class="conteudo-lateral">
                 <h3>Postagens Recentes</h3>
-                <div>
-                    <p class="texto-lateral"> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="">Leia Mais</a>
-                </div>
-                <hr>
-                <div>
-                    <p class="texto-lateral"> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="">Leia Mais</a>
-                </div>
+                <ul class="lista-lateral">
+                    <li>
+                        <p>Novos processadores batem recorde de velocidade.</p>
+                        <a href="">Saiba mais</a>
+                    </li>
+                    <hr>
+                    <li>
+                        <p>O impacto dos eletrônicos no meio ambiente.</p>
+                        <a href="">Saiba mais</a>
+                    </li>
+                </ul>
             </div>
+
             <div class="conteudo-lateral">
                 <h3>Categorias</h3>
-                <a href="index.html">Home</a><br>
-                <a href="jogos.html">Jogos</a><br>
-                <a href="celulares.html">Celulares</a><br>
-                <a href="informatica.html">Informática</a><br>
-                <a href="eletronicos.html">Eletrônicos</a><br>
+                <nav class="categorias-links">
+                    <a href="jogos.html">Jogos</a>
+                    <a href="celulares.html">Celulares</a>
+                    <a href="informatica.html">Informática</a>
+                    <a href="eletronicos.html">Eletrônicos</a>
+                </nav>
             </div>
-        </div>
-        <div id="rodape">
-            Todos os direitos reservados
-        </div>
-    </div>
+        </aside>
+    </main>
+
+    <footer id="rodape">
+        <p>&copy; 2026 TecBlog. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
